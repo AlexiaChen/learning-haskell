@@ -74,3 +74,17 @@ generateList start stop = [start..stop]
 
 -- generateOdd10 = [1,3,5,7,9]
 generateOdd10 = [1,3..9]
+
+-- list comprehension
+generateEven = [x*2 | x <- [1..10]]
+
+-- [6,8,10,12,14,16,18,20]
+generateEvenGreat5 = [x*2 | x <- [1..10], x*2 > 5]
+
+-- tuple
+tupleSample = (1, 'a', False)
+
+secondTuple = snd ('b', True)
+
+-- construct right triangle
+rightTriangles = [(a, b, c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a + b + c == 24]
